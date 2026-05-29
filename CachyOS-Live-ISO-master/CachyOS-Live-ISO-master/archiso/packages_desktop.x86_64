@@ -198,3 +198,17 @@ xdg-utils
 xfsprogs
 xl2tpd
 zfs-utils
+#Bramble Core Filesystems and Drivers
+btrfs-progs
+snapper
+chwd
+#Bramble Phase 2 and 4 Dependencies
+flatpak
+podman
+python-pyqt6
+python-requests
+#KDE Plasma 6 Base 
+plasma-desktop
+plasma-nm
+konsole
+dolphin
