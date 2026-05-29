@@ -13,6 +13,9 @@ bootmodes=('bios.syslinux' 'uefi.grub')
 ## systemd-boot
 #bootmodes=('bios.syslinux' 'uefi.systemd-boot')
 arch="x86_64"
+arch="x86_64"
+kernel_name="linux-cachyos"  # Add this line!
+pacman_conf="pacman.conf"
 pacman_conf="pacman.conf"
 airootfs_image_type="squashfs"
 airootfs_image_tool_options=('-comp' 'xz' '-Xbcj' 'x86' '-b' '1M' '-Xdict-size' '1M')

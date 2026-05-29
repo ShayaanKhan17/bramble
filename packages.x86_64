@@ -2,3 +2,12 @@ syslinux
 grub
 btrfs-progs
 snapper
+python
+coreutils
+bash
+cachyos-keyring
+archlinux-keyring
+linux-cachyos
+linux-cachyos-headers
+mkinitcpio
+mkinitcpio-archiso
