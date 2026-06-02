@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Name=Bramble Welcome
+Exec=python /usr/local/bin/bramble-welcome
+Icon=setup
+Terminal=false

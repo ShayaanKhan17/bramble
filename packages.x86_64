@@ -1,8 +1,12 @@
+# --- CORE SYSTEM ENGINE ---
+systemd
+systemd-libs
 syslinux
 grub
 btrfs-progs
 snapper
 python
+python-pyqt6
 coreutils
 bash
 cachyos-keyring
@@ -11,3 +15,36 @@ linux-cachyos
 linux-cachyos-headers
 mkinitcpio
 mkinitcpio-archiso
+memtest86+
+memtest86+-efi
+edk2-shell
+
+# --- GRAPHICAL CORE ---
+xorg-server
+xorg-xinit
+mesa
+networkmanager
+pipewire
+pipewire-pulse
+wireplumber
+qt6-wayland
+
+# --- COSMIC DESKTOP ---
+cosmic-session
+cosmic-applets
+cosmic-launcher
+cosmic-panel
+cosmic-settings
+
+# --- KDE PLASMA (For the Windows/Mac look) ---
+plasma-desktop
+plasma-nm
+kde-gtk-config
+kio-extras
+bluedevil
+kwrited
+milou
+plasma-pa
+polkit-kde-agent
+powerdevil
+sddm

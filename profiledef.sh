@@ -2,23 +2,19 @@
 # shellcheck disable=SC2034
 
 iso_name="cachyos"
-iso_label="COS_$(date --date="@${SOURCE_DATE_EPOCH:-$(date +%s)}" +%Y%m)"
-iso_publisher="CachyOS <https://cachyos.org>"
-iso_application="CachyOS Live/Rescue DVD"
+iso_label="BRAMBLEOS"
+iso_publisher="BrambleOS <https://cachyos.org>"
+iso_application="BrambleOS Live/Rescue"
 iso_version="$(date --date="@${SOURCE_DATE_EPOCH:-$(date +%s)}" +%Y.%m.%d)"
 install_dir="arch"
 buildmodes=('iso')
-## GRUB
 bootmodes=('bios.syslinux' 'uefi.grub')
-## systemd-boot
-#bootmodes=('bios.syslinux' 'uefi.systemd-boot')
 arch="x86_64"
-arch="x86_64"
-kernel_name="linux-cachyos"  # Add this line!
-pacman_conf="pacman.conf"
+kernel_name="linux-cachyos"
 pacman_conf="pacman.conf"
 airootfs_image_type="squashfs"
 airootfs_image_tool_options=('-comp' 'xz' '-Xbcj' 'x86' '-b' '1M' '-Xdict-size' '1M')
+
 file_permissions=(
   ["/etc/shadow"]="0:0:400"
   ["/etc/gshadow"]="0:0:400"
@@ -37,4 +33,9 @@ file_permissions=(
   ["/usr/local/bin/prepare-live-desktop.sh"]="0:0:755"
   ["/usr/local/bin/nvidia-module-loader"]="0:0:755"
   ["/usr/local/bin/pkexec-wrapper"]="0:0:755"
+  
+  # --- BRAMBLE SPECIFIC PERMISSIONS ---
+  ["/usr/local/bin/bramble-welcome"]="0:0:755"
+  ["/usr/local/bin/bramble-hw.sh"]="0:0:755"
+  ["/etc/sddm.conf.d/autologin.conf"]="0:0:644"
 )
